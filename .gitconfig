@@ -1,0 +1,20 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Mike Falanga
+	email = m.falanga@gmail.com
+[alias]
+	amend = commit --amend --no-edit
+	au = add -u
+	br = branch -v
+	co = checkout
+	ds = diff --stat=160,120
+	g = grep --break --heading --line-number
+	gas = !"git rebase -i --autosquash \"$1\"~1 #"
+	last = log -1
+	s = status -sb
+[core]
+	editor = code --wait
+[init]
+	defaultBranch = main
+[grep]
+	linenumber = true
