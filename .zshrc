@@ -107,8 +107,28 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-bible() {
+# Searches aliases
+# When two arguments are supplied, the second one
+#  searches within the results of the firt one.
+function aas() {
+  if [ -z "$2" ]
+  then
+    alias | grep $1
+  else
+    alias | grep $1 | grep $2
+  fi
+}
+
+# Opens a browser to the USCCB bible page
+# arg1: book
+# arg2: chapter
+function bible() {
   open "https://bible.usccb.org/bible/$1/$2"
+}
+
+# Searches history
+function hst() {
+  history | grep $1
 }
 
 # tabtab source for packages
