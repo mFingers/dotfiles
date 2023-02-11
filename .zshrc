@@ -75,6 +75,8 @@ plugins=(
     autojump
     brew
     git
+    kubectl
+    minikube
 )
 
 source $ZSH/oh-my-zsh.sh
