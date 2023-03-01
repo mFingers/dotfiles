@@ -72,11 +72,10 @@ ZSH_THEME="fingers"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    autojump
-    brew
+    aws
+    gh
     git
     kubectl
-    minikube
 )
 
 source $ZSH/oh-my-zsh.sh
