@@ -141,3 +141,10 @@ eval "$(nodenv init -)"
 # autoload -U +X bashcompinit && bashcompinit
 # complete -o nospace -C /usr/local/bin/terraform terraform
 export PATH="/usr/local/sbin:$PATH"
+
+# activate zsh-autosuggestions (installed with brew)
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# activate zsh-syntax-highlighting (installed with brew)
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
