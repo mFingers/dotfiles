@@ -11,6 +11,7 @@
 	g = grep --break --heading --line-number
 	gas = !"git rebase -i --autosquash \"$1\"~1 #"
 	last = log -1
+	logp = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	s = status -sb
 [core]
 	editor = code --wait
