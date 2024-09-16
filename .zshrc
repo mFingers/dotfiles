@@ -148,3 +148,6 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # activate zsh-syntax-highlighting (installed with brew)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+eval "$(rbenv init - zsh)"
+export RBENV_VERSION=3.3.0
+
