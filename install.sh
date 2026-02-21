@@ -8,7 +8,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 brew bundle
 
 # Setup symlinks
-DOTFILES_DIR=$HOME/.dotfiles
+DOTFILES_DIR=$HOME/dotfiles
 export DOTFILES_DIR
 
 ## iTerm2
