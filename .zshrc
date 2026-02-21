@@ -134,7 +134,13 @@ function hst() {
 # uninstall by removing these lines
 # [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
 
-eval "$(nodenv init -)"
+
+eval "$(fnm env --use-on-cd --shell zsh)"
+# fnm completion
+if [ -d "$HOME/.fnm" ]; then
+  source <(fnm completions --shell zsh) > /dev/null 2>&1
+  compdef _fnm fnm
+fi   
 
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
