@@ -10,6 +10,8 @@
 	ds = diff --stat=160,120
 	g = grep --break --heading --line-number
 	gas = !"git rebase -i --autosquash \"$1\"~1 #"
+	gone = !"git br -d $(git br | grep gone | awk '{print $1}')"
+	gpp = git pull --prune
 	last = log -1
 	logp = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	s = status -sb
