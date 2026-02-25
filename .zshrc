@@ -73,6 +73,7 @@ ZSH_THEME="fingers"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     aws
+    docker
     gh
     git
     kubectl
@@ -140,7 +141,7 @@ eval "$(fnm env --use-on-cd --shell zsh)"
 if [ -d "$HOME/.fnm" ]; then
   source <(fnm completions --shell zsh) > /dev/null 2>&1
   compdef _fnm fnm
-fi   
+fi
 
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
@@ -149,10 +150,10 @@ fi
 export PATH="/usr/local/sbin:$PATH"
 
 # activate zsh-autosuggestions (installed with brew)
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# activate zsh-syntax-highlighting (installed with brew)
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# activate zsh-syntax-highlighting (installed with brew). Must be sourced last, and after plugins
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 eval "$(rbenv init - zsh)"
 export RBENV_VERSION=3.3.0
